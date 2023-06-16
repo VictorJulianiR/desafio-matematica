@@ -66,7 +66,7 @@ Contribuições são bem-vindas! Se você deseja contribuir para este projeto, s
 
 ## Licença
 
-Este projeto está licenciado sob [Nome da Licença] - consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
+Este projeto está disponível sob a Licença de Código Aberto [Open Source License] - consulte o arquivo LICENSE para obter mais detalhes.
 
 ## Autores
 
