@@ -25,8 +25,7 @@ Para obter uma cópia local deste projeto e executá-lo em sua máquina, siga es
 
 Antes de começar, certifique-se de ter os seguintes pré-requisitos instalados:
 
-- Python (versão X.X.X)
-- [Outras dependências]
+- Python
 
 ### Instalação
 
