@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO MATEMÁTICA</title>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // NÚMERO DE DESAFIOS
+    var numberOfChallenges = 2;
+    var currentChallenge = Math.floor(Math.random() * numberOfChallenges) + 1;
+
+    // Set the src attribute of the image element
+    document.getElementById("challenge-img").src = `desafios/${currentChallenge}.jpg`;
+
+    document.getElementById("submit-answer").addEventListener("click", function () {
+        var userAnswer = document.getElementById("answer").value;
+        var fileReader = new FileReader();
+        
+        fileReader.onload = function() {
+            var correctAnswer = fileReader.result.trim();
+            if (userAnswer === correctAnswer) {
+                alert("Correto!");
+            } else {
+                if (confirm("Incorreto. Quer ver a solução?")) {
+                    window.location.href = `respostas/${currentChallenge}.jpg`;
+                }
+            }
+        };
+
+        fileReader.onerror = function() {
+            console.error("Error reading file.");
+        };
+        
+        fetch(`respostas/${currentChallenge}.txt`).then(response => response.blob()).then((blob) => {
+            fileReader.readAsText(blob);
+        }).catch((error) => {
+            console.error("Error fetching file:", error);
+        });
+    });
+
+    document.getElementById("challenge-img").addEventListener("click", function () {
+        window.open(`respostas/${currentChallenge}.jpg`, "_blank");
+    });
+});
+    </script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        #answer, #submit-answer {
+            font-size: 18px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        
+        #challenge-img {
+            max-width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="challenge-img" alt="Challenge image">
+    <input type="text" id="answer" placeholder="Digite sua resposta usando notação matemática de calculadora...">
+    <button id="submit-answer">Check Answer</button>
+</body>
+</html>
