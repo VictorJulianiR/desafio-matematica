@@ -2,6 +2,8 @@
 
 Bem-vindo ao arquivo README dos "Desafios de Geometria". Este documento fornece uma visão geral do projeto e instruções para executá-lo em sua máquina local.
 
+Para ver nosso desafio funcionanado, acesse: "Desafios de Geometria": [https://victorjulianir.github.io/desafio-matematica/]
+
 ## Índice
 
 - [Descrição](#descrição)
@@ -73,8 +75,6 @@ Este projeto está disponível sob a Licença de Código Aberto [Open Source Lic
 Se você tiver alguma dúvida, sugestão ou feedback, entre em contato utilizando a aba de Issues. 
 
 Por:
-Marcos Henrique e Victor Juliani.
-
-Para mais informações, visite a página do GitHub dos "Desafios de Geometria": [Link para o GitHub Pages]
+Marcos Henrique Dias e Victor Juliani.
 
 Obrigado pelo seu interesse no projeto "Desafios de Geometria"!
